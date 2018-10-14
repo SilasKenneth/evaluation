@@ -16,7 +16,7 @@ function any_empty($array){
    return false;
 }
 function try_change(){
-     $error = null;
+     $error = "Y";
      if(isset($_POST["submit"])){
            $currpass = isset($_POST["currpass"]) ? $_POST["currpass"] : "";
            $newpass = isset($_POST["newpass"]) ? $_POST["newpass"] : "";
@@ -59,6 +59,8 @@ $res = try_change();
 $success = null;
 if(!$res){
     $success = "The password was successfully changed";
+} else if ($res === "Y"){
+    $res = null;
 }
 ?>
 <html lang="en">

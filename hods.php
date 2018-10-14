@@ -46,7 +46,6 @@ if(is_admin()){
                 <th>Number</th>
                 <th>Full name</th>
                 <th>Department name</th>
-                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
@@ -58,13 +57,6 @@ if(is_admin()){
                     <?php if(is_admin()) { ?>
                         <td><?= !zero($hod->getDepartment()) ? $hod->getDepartment()->getName() : "N/A" ?></td>
                     <?php } ?>
-                    <td class="flex-row">
-                        <?php if(is_hod()) {?>
-                            <a href="units.php?course=<?= $hod->getId() ?>" class="btn btn-success btn-sm" title="View units"><i class="fa fa-school"></i> </a>
-                        <?php } else if(is_admin()) {?>
-                            <a href="editlecturer.php?course=<?= $hod->getId() ?>" class="btn btn-primary btn-sm" title="Edit lecturer"><i class="fa fa-edit"></i> </a>
-                        <?php } ?>
-                    </td>
                 </tr>
                 <?php $i++;} ?>
             </tbody>

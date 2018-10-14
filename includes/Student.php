@@ -228,12 +228,16 @@ class Student {
             return $errors->getByCode(104);
         }
         try{
+            $db = new Database();
+            $conn = $db->connection();
+            if(gettype($conn) !== 'object'){
+                return FALSE;
+            }
             $fields = "firstname, surname, lastname, registration_no, course, year_of_study,semester, status, phone,email,username, password";
-            $qr = $this->prepare("INSERT INTO students(".$fields.") VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+            $qr = $conn->prepare("INSERT INTO students(".$fields.") VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
             $qr->execute($this->values);
             return true;
         }catch (Exception $ex){
-            //print_r($ex);
             return false;
         }
     }

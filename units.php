@@ -15,7 +15,7 @@ $course = Course::getById($id);
 //if(!is_hod()){
 //    redirect("index.php");
 //}
-if(count($course) === 0){
+if(zero($course)){
     redirect("courses.php");
 }
 $units = $course->getUnits();

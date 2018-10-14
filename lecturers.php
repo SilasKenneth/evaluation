@@ -51,7 +51,6 @@ if(is_admin()){
                     <th>Phone</th>
                     <th>Email</th>
                 <?php } ?>
-                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
@@ -64,13 +63,6 @@ if(is_admin()){
                         <td><?= $lecturer->getPhone() ?></td>
                         <td><?= $lecturer->getEmail() ?></td>
                     <?php } ?>
-                    <td class="flex-row">
-                        <?php if(is_hod()) {?>
-                            <a href="units.php?course=<?= $lecturer->getId() ?>" class="btn btn-success btn-sm" title="View units"><i class="fa fa-school"></i> </a>
-                        <?php } else if(is_admin()) {?>
-                            <a href="editlecturer.php?course=<?= $lecturer->getId() ?>" class="btn btn-primary btn-sm" title="Edit lecturer"><i class="fa fa-edit"></i> </a>
-                        <?php } ?>
-                    </td>
                 </tr>
                 <?php $i++;} ?>
             </tbody>

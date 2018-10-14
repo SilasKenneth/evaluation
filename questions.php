@@ -14,7 +14,7 @@ $questions = Question::all();
 ?>
 <html>
 <head>
-    <title>Departments</title>
+    <title>Questions</title>
     <?php
     include_once "includes/styles.php";
     ?>

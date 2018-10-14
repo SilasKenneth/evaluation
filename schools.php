@@ -42,7 +42,6 @@ include_once "includes/admin_nav_logged_in.php";
             <tr class="bg-primary text-white">
                 <th>Number</th>
                 <th>School name</th>
-                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
@@ -50,13 +49,6 @@ include_once "includes/admin_nav_logged_in.php";
                 <tr>
                     <td><?= $i ?></td>
                     <td><?= $school->getName() ?></td>
-                    <td class="flex-row">
-                        <?php if(is_hod()) {?>
-                        <?php } else if(is_admin()) {?>
-                            <a href="editschool.php?school=<?= $school->getId() ?>" class="btn btn-success btn-sm" title="View school"><i class="fa fa-pen"></i> </a>
-                            <a href="deleteschool.php?school=<?= $school->getId() ?>" class="btn btn-danger btn-sm" title="Delete school"><i class="fa fa-trash"></i> </a>
-                        <?php } ?>
-                    </td>
                 </tr>
                 <?php $i++;} ?>
             </tbody>
