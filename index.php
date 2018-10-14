@@ -44,7 +44,7 @@ $res = try_login();
 <?php include_once  "includes/header.php"; ?>
    <div class="col-md-6 col-lg-6 col-sm-10 col-xl-4 offset-md-4 offset-sm-1 center">
        <form method="post">
-           <p class="font-weight-light text-center text-dark">To continue please sign in using your student Registration and password</p>
+           <p class="font-weight-light text-center text-dark">To continue please sign in using your username or email and password</p>
            <br>
            <?php if($res != ""){?>
                <p class="bg-danger text-white p-2 rounded"><?php echo $res; ?></p>
