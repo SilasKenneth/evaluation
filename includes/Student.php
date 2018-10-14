@@ -270,7 +270,7 @@ class Student {
 //                print_r(gettype($conn));
                 return [];
             }
-            $sql = "SELECT * FROM students WHERE (registration_no = ?) or (email = ?)";
+            $sql = "SELECT * FROM students WHERE (username= ?) or (email = ?)";
 //            print_r($final);
             $qr = $conn->prepare($sql);
             $qr->execute($final);
