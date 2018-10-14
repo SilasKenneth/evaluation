@@ -49,7 +49,6 @@ if(is_admin()){
                 <th>Email</th>
                 <th>Phone</th>
                 <th>Year</th>
-                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
@@ -62,9 +61,6 @@ if(is_admin()){
                         <td><?= $student->getPhone() ?></td>
                         <td><?= $student->getYearOfStudy() ?></td>
                     <?php } ?>
-                    <td class="flex-row">
-                        <a href="editstudent.php?student=<?= $student->getId() ?>" class="btn btn-primary btn-sm" title="Edit lecturer"><i class="fa fa-edit"></i> </a>
-                    </td>
                 </tr>
                 <?php $i++;} ?>
             </tbody>

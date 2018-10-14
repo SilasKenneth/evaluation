@@ -45,7 +45,9 @@ if(is_admin()) {
                 <th>Date started</th>
                 <th>End date</th>
                 <th>Status</th>
+                <?php if(is_hod()){ ?>
                 <th>Actions</th>
+                <?php } ?>
             </tr>
             </thead>
             <tbody>
@@ -66,16 +68,11 @@ if(is_admin()) {
                             <p class="badge badge-danger">Closed</p>
                     <?php }?>
                     </td>
+                    <?php if(is_hod()) { ?>
                     <td>
-                        <?php if(is_admin()) { ?>
-                        <!--                        <div class="btn-group btn-group-sm text-white">-->
-                        <a class="btn btn-outline-success btn-sm" href="extend.php?evaluation=<?= $evaluation->getId() ?>"><i class="fa fa-clock"></i> </a>
-                        <a class="btn btn-outline-primary btn-sm" href="close.php?evaluation=<?= $evaluation->getId() ?>"><i class="fa fa-cogs"></i> </a>
-                        <!--                        </div>-->
-                        <?php } else {?>
-                            <a class="btn btn-outline-primary btn-sm" href="results.php?evaluation=<?= $evaluation->getId() ?>" title="View results"><i class="fa fa-shower"></i> </a>
-                        <?php } ?>
+                        <a class="btn btn-outline-primary btn-sm" href="results.php?evaluation=<?= $evaluation->getId() ?>" title="View results"><i class="fa fa-history"></i> </a>
                     </td>
+                    <?php } ?>
                 </tr>
                 <?php $i++; } ?>
             </tbody>
