@@ -10,5 +10,7 @@
         }
     ],
     "minimum-stability": "beta",
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^4.1"
+    }
 }

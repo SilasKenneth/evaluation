@@ -1,4 +1,5 @@
 <?php
+require_once "./vendor/autoload.php";
 require_once "./util/utils.php";
 require_once "./util/Database.php";
 require_once "./includes/School.php";
@@ -14,3 +15,6 @@ require_once "./includes/Evaluation.php";
 require_once "./includes/Question.php";
 require_once "./includes/Result.php";
 require_once "./includes/Response.php";
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
