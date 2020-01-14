@@ -1,0 +1,14 @@
+{
+    "name": "silaskenneth/evaluation",
+    "description": "A project for the 22nd century universitiies and colleges",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Silas Kenneth",
+            "email": "silaskenneth1@gmail.com"
+        }
+    ],
+    "minimum-stability": "beta",
+    "require": {}
+}
