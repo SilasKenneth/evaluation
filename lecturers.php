@@ -10,7 +10,6 @@ function process(){
 //TODO: This is for both hod and admin but hod can only view courses in his department
 ?>
 <?php
-//print_r($_SESSION['user_type'] === "hod");
 $lecturers = Lecturer::all();
 ?>
 <html>
