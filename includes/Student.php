@@ -364,6 +364,7 @@ class Student {
             }
             return $results;
         }catch(Exception $ex){
+            echo $ex->getMessage();
             return $units;
         }
     }

@@ -56,11 +56,11 @@ include_once "includes/admin_nav_logged_in.php";
     <?php } else {?>
     <div class="col-mod-4 offset-2">
         <h2 class="text-warning text-center center">Sorry</h2>
-        <p class="text-center"><small class="font-weight-light text-center font-italic">There are currently no courses available</small></p>
+        <p class="text-center"><small class="font-weight-light text-center font-italic">There are currently no schools available</small></p>
         <?php
         if(is_admin()){
             ?>
-            <a class="btn btn-primary btn-sm offset-5" href="addcourse.php">Add some <i class="fa fa-plus-circle"></i> </a>
+            <a class="btn btn-primary btn-sm offset-5" href="addschool.php">Add some <i class="fa fa-plus-circle"></i> </a>
         <?php } }?>
     </div>
 </div>

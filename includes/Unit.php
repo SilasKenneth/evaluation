@@ -27,6 +27,7 @@ class Unit
             $query->execute(array($title, $code, $year, $semester, $course, $lecturer));
             return true;
         }catch (Exception $ex){
+            echo $ex->getMessage();
             return false;
         }
     }

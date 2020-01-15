@@ -2,7 +2,7 @@
 
 function redirect($page){
     if(file_exists($page)){
-        header("location: ".$page);
+        header("Location: ".$page);
     }
 }
 

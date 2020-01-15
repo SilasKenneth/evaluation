@@ -77,17 +77,21 @@ class Admin
             $db = new Database();
             $conn = $db->connection();
             if(gettype($conn) !== "object"){
+                // print_r("NOT_OBJECT");
                 return [];
             }
             $sql = "SELECT * FROM admins WHERE username=? or email=?";
             $query = $conn->prepare($sql);
             $query->execute(array($username, $username));
             $found = $query->fetchAll(PDO::FETCH_CLASS, "Admin");
+            // print_r("SOMETHING...");
             if(zero($found)){
                 return [];
             }
+            
             return $found[0];
         }catch (Exception $ex){
+            print_r($ex);
             return [];
         }
     }

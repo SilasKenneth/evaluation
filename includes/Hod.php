@@ -28,6 +28,7 @@ class Hod{
             }
             return $records;
         }catch (Exception $ex){
+            print_r($ex);
             return [];
         }
     }

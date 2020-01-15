@@ -57,6 +57,7 @@ class Evaluation
             $query->execute(array($endate, $note, $status));
             return true;
         }catch (Exception $ex){
+            print_r($ex);
             return false;
         }
     }
@@ -138,7 +139,7 @@ class Evaluation
             if(!$query){
                 return [];
             }
-            $query->execute(array($this->id));
+            $query->execute();
             $records = $query->fetchAll(PDO::FETCH_CLASS, "Question");
             if(zero($records)){
                 return [];
@@ -146,6 +147,7 @@ class Evaluation
             return $records;
         }catch (Exception $exception){
 //            print_r($exception);
+            echo $exception->getMessage(); 
             return [];
         }
     }
@@ -237,7 +239,7 @@ class Evaluation
             }
             return true;
         }catch (Exception $ex){
-//            print_r($ex);
+            echo $ex->getMessage();
             return false;
         }
     }
