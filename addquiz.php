@@ -4,6 +4,7 @@ require_once "includer.php";
 require_once "includes/check_logged.php";
 $is_ad = is_admin();
 //Check if the currently logged in user is an admin
+// Proceed to log in
 if(!$is_ad){
     redirect("adminlogin.php");
 }
