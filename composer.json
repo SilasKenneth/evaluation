@@ -9,7 +9,7 @@
             "email": "silaskenneth1@gmail.com"
         }
     ],
-    "minimum-stability": "beta",
+    "minimum-stability": "RC",
     "require": {
         "vlucas/phpdotenv": "^4.1"
     }
